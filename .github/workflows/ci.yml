@@ -42,7 +42,9 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
-      - uses: android-actions/setup-android@v3
+      - name: Check preinstalled Android SDK
+        run: |
+          test -n "$ANDROID_HOME" && test -d "$ANDROID_HOME/platforms/android-34"
       - run: npm ci && npm run android:sync
         working-directory: frontend
       - run: chmod +x gradlew && ./gradlew --no-daemon assembleDebug
