@@ -10,3 +10,5 @@
 - No drafting strategy/formulas, geometry, seam solver, allowance, notches, grading, exports, benchmark, reference data, sensitivity analysis or accuracy measurement.
 - No order/ledger, messaging, fitting corrections, fabric/cost estimation, Bluetooth implementation, or PWA sync.
 - Customer and garment sources and approved method must be confirmed by user and a human patternmaker before drafting implementation.
+- Docker Compose could not be executed in the current sandbox (Docker unavailable). Android APK installation, runtime and updates have not been tested on a device. CI-generated debug signing keys may vary between runs; a later APK may require uninstalling the earlier build, which deletes local demo data.
+- Initial GitHub Actions run 44026059217 failed at Android SDK setup; run 44026325679 succeeded after switching to the hosted Android SDK. The release download redirect is not accessible from this sandbox, so actual byte download and installation remain unverified here.
